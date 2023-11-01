@@ -10,7 +10,7 @@ public class Principal {
         Serie minhaSerie = new Serie();
         minhaSerie.setNome("Iniciador");
         minhaSerie.setAnoDeLancamento(2023);
-        //minhaSerie.setIncluidoNoPlano();
+
         minhaSerie.setDuracaoEmMinutos( 100);
 
 
