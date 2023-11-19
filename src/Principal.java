@@ -1,3 +1,7 @@
+import br.com.jobflix.calculos.CalculadoraDeTempo;
+import br.com.jobflix.calculos.FiltroRecomendacao;
+import br.com.jobflix.modelos.Episodio;
+import br.com.jobflix.modelos.Filme;
 import br.com.jobflix.modelos.Serie;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
@@ -23,6 +27,37 @@ public class Principal {
         System.out.println(minhaSerie.getTotalDeAvaliacoes());
         System.out.println(minhaSerie.obterMedia());
 
+        Serie nomeSerie = new Serie();
+        nomeSerie.setNome("The Wicher");
+        nomeSerie.setAnoDeLancamento(2022);
+        nomeSerie.exibeFichaTecnica();
+        nomeSerie.setTemporadas(2);
+        nomeSerie.setEpisodioTemporada(8);
+        nomeSerie.setMinustosEpisodio(90);
+        System.out.println("Para terminar a serie são: " + nomeSerie.getDuracaoEmMinutos());
+        //=====================================================================================
+
+        Filme meuFilme = new Filme();
+        meuFilme.setNome("Luqueta Jumper");
+        meuFilme.setAnoDeLancamento(2009);
+        meuFilme.setDuracaoEmMinutos(180);
+        System.out.println("Duração do filme "+meuFilme.getDuracaoEmMinutos());
+
+
+
+        CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+        calculadora.inclui(meuFilme);
+        calculadora.inclui(minhaSerie);
+        System.out.println(calculadora.getTempT());
+
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        filtro.filtra(meuFilme);
+
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);
+        episodio.setNome("Dark");
+        episodio.setNumero(300);
+        filtro.filtra(episodio);
 
 
         }
