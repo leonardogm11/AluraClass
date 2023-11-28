@@ -11,10 +11,7 @@ public class Principal {
 
        // br.com.jobflix.modelos.Serie minhaSerie = new br.com.jobflix.modelos.Serie(); pegaria a classe serie e dentro da variavel minhaSerie coloca algo.
 
-        Serie minhaSerie = new Serie();
-        minhaSerie.setNome("Iniciador");
-        minhaSerie.setAnoDeLancamento(2023);
-
+        Serie minhaSerie = new Serie("Iniciador",2023);
         minhaSerie.setDuracaoEmMinutos( 100);
 
 
@@ -27,9 +24,9 @@ public class Principal {
         System.out.println(minhaSerie.getTotalDeAvaliacoes());
         System.out.println(minhaSerie.obterMedia());
 
-        Serie nomeSerie = new Serie();
-        nomeSerie.setNome("The Wicher");
-        nomeSerie.setAnoDeLancamento(2022);
+        Serie nomeSerie = new Serie("The Wicher",2022);
+        //nomeSerie.setNome("The Wicher");
+        //nomeSerie.setAnoDeLancamento(2022);
         nomeSerie.exibeFichaTecnica();
         nomeSerie.setTemporadas(2);
         nomeSerie.setEpisodioTemporada(8);
@@ -37,9 +34,9 @@ public class Principal {
         System.out.println("Para terminar a serie são: " + nomeSerie.getDuracaoEmMinutos());
         //=====================================================================================
 
-        Filme meuFilme = new Filme();
-        meuFilme.setNome("Luqueta Jumper");
-        meuFilme.setAnoDeLancamento(2009);
+        Filme meuFilme = new Filme("Luqueta Jumper",2009);
+        //meuFilme.setNome("Luqueta Jumper");
+        //meuFilme.setAnoDeLancamento(2009);
         meuFilme.setDuracaoEmMinutos(180);
         System.out.println("Duração do filme "+meuFilme.getDuracaoEmMinutos());
 
@@ -53,11 +50,16 @@ public class Principal {
         FiltroRecomendacao filtro = new FiltroRecomendacao();
         filtro.filtra(meuFilme);
 
-        Episodio episodio = new Episodio();
-        episodio.setNumero(1);
-        episodio.setNome("Dark");
-        episodio.setNumero(300);
-        filtro.filtra(episodio);
+        Serie serieTop = new Serie ("Dark",2020);
+        serieTop.setTemporadas(10);
+
+
+
+        Filme meuFilme2 = new Filme("Harry Potter",2009);
+        //meuFilme.setNome("Harry Potter");
+        //meuFilme.setAnoDeLancamento(2009);
+        meuFilme.setDuracaoEmMinutos(180);
+        System.out.println("Duração do filme "+meuFilme.getDuracaoEmMinutos());
 
 
         }

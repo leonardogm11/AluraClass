@@ -7,6 +7,10 @@ public class Serie extends Titulo { // Na aula br.com.jobflix.modelos.Serie troc
         private int episodioTemporada;
         private int minustosEpisodio;
 
+        public Serie(String nome, int anoDeLancamento) {
+                super(nome, anoDeLancamento);
+        }
+
         public int getTemporadas() {
                 return temporadas;
         }
